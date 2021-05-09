@@ -55,7 +55,12 @@ void TaskSample (void *pvParameters)
         
         printf("%u\n", val);
         uint64_t time_spent = bl_rtc_get_timestamp_ms() - start_time;
-        vTaskDelay(100 - time_spent);
+        
+        // create delay to achive 10hz
+        uint64_t delay = 100 - time_spent;
+        if (delay>0){      
+            vTaskDelay(pdMS_TO_TICKS(delay));
+        }
     }
 }
 
