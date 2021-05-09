@@ -3,8 +3,8 @@
 #include <FreeRTOS.h>
 #include <task.h>
 #include <bl_uart.h>
-#include "bl_gpio.h"
-#include "bl_rtc.h"
+#include <bl_gpio.h>
+#include <bl_rtc.h>
 
 #include <bl602_gpio.h>
 #include <bl602_adc.h>
